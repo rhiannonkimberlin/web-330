@@ -1,0 +1,76 @@
+html{
+    font-family: 'Oswald', sans-serif;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 500px;
+    min-height: 500px;
+    background-color: #F9F6F8;
+    color: #241820;
+}
+
+body{
+    display: block;
+}
+div.page{
+    display: block;
+}
+div.portfoliopicture{
+    width: 50%;
+    float: left;
+}
+div.portfoliodescription{
+    width: 50%;
+    display: inline-block;
+    padding: 15px;
+    background-color: #F9F6F8;
+    color: #241820;
+    margin: auto;
+}
+div.fakeheader{
+    margin: auto;
+    text-align: center;
+    display: block;
+}
+img.portfoliopicture{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+h1{
+    font-size: 85px;
+    display: inline;
+}
+h4{
+    text-align: justify;
+}
+a.links{
+    background-color: #F9F6F8;
+	color: #241820;
+	text-decoration: none;
+	font-size: 16px;
+	padding: 10px;
+    border: #241820 3px solid;
+    text-align: center;
+    margin: auto;
+    float: auto;
+}
+p.links{
+    margin: auto;
+    text-align: center;
+}
+div.links{
+    padding: 10px;
+}
+img.projects{
+    max-width: 250px;
+    border: #241820 3px solid;
+}
+div.projects{
+    display: block;
+}
+figure{
+    display: inline-block;
+    padding:10px;
+}
