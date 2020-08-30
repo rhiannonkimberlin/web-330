@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+    ============================================
+; Title:  kimberlin-exercise-4.3.html
+; Author: Professor Krasso
+; Date:   August 30 2020
+; Modified By: Rhiannon Kimberlin
+; Description: Exercise 4.3
+;===========================================
+-->
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <title>Kimberlin Exercise 4.3</title>
+    </head>
+
+    <body>
+        <h4>HTTP DELETE Request</h4>
+        <button id="delete1">Delete Security User</button>
+
+        <script>
+            $(function() {
+                $('#delete1').click(function() {
+                    $.ajax({
+                        url: 'http://httpbin.org/delete',
+                        dataType: 'json',
+                        type: 'DELETE',
+                        data: { username: 'GingerbreadMan', password: 'youcantcatchme', email: 'runasfastasyoucan@live.com'},   
+                        success: function(data, status){
+                            console.log('Username: ' + data.form.username + '\nPassword: ' + data.form.password + '\nEmail: ' +data.form.email + '\nStatus: ' + status)
+                        }})
+                })
+            })
+        </script>
+    </body>
+</html>
