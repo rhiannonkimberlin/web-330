@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+============================================
+; Title:  kimberlin-assignment-7.4.html
+; Author: Professor Krasso
+; Date:   September 19 2020
+; Modified By: Rhiannon Kimberlin
+; Description: Assignment 7.4
+;===========================================
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Kimberlin Assignment 7.4</title>
+
+    <!-- Stylesheet - Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"/>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="../knockout-3.5.1.js"></script>
+</head>
+<body>
+
+    <div role="main" class="container">
+        <br>
+        <h2>Kimberlin Assignment 7.4</h2>
+        <br>
+
+        <table class="table table-dark table-striped table-hover">
+            <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Link</th>
+                </tr>
+              </thead>
+              <tbody data-bind="foreach: tutorial">
+                <tr>
+                  <td data-bind="text: title"></td>
+                  <td data-bind="text: description"></td>
+                  <td><a data-bind="text:URL, attr: {href: URL}, style: {color:'red'}" target="_blank"></a></td>
+                </tr>
+              </tbody>
+        </table>
+    </div>
+
+<script>
+      function TutorialViewModel() {
+        this.tutorial = ko.observableArray([
+            {title: 'Knockout Intro Tutorial', description: 'Basics of building a web UI with the Model-View-ViewModel using Knockout.JS', URL: 'http://learn.knockoutjs.com/#/?tutorial=intro'},
+            {title: 'Knockout Lists and Collections Tutorial', description: 'Learn how to use observable arrays to generate repeating blocks of UI elements', URL: 'http://learn.knockoutjs.com/#/?tutorial=collections'},
+            {title: 'Knockout SPA Tutorial', description: 'Learn how to build a webmail client with Knockout.JS', URL: 'http://learn.knockoutjs.com/#/?tutorial=webmail'},
+            {title: 'Knockout Custom Bindings Tutorial', description: 'Learn how to create custom bindings to join the view and view model together', URL: 'http://learn.knockoutjs.com/#/?tutorial=custombindings'},
+            {title: 'Knockout Loading and Saving Data Tutorial', description: 'Learn how to save and load inputted information with Knockout.JS', URL: 'http://learn.knockoutjs.com/#/?tutorial=loadingsaving'}
+        ]);
+    };
+    ko.applyBindings(new TutorialViewModel());
+</script>
+</body>
+</html>
